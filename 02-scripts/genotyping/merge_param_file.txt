@@ -1,0 +1,10 @@
+geno1:      souilmi2024_bergstrom2022_bergstrom2020_zhang2020_plassais2019_finalset.bergsgrom2022-analyses-loci.tv.c2.geno
+snp1:       souilmi2024_bergstrom2022_bergstrom2020_zhang2020_plassais2019_finalset.bergsgrom2022-analyses-loci.tv.c2.snp
+ind1:       souilmi2024_bergstrom2022_bergstrom2020_zhang2020_plassais2019_finalset.bergsgrom2022-analyses-loci.tv.c2.ind
+geno2:      pileupcaller.double.geno
+snp2:       pileupcaller.double.snp
+ind2:       pileupcaller.double.ind
+genooutfilename:    palaeofaeces_souilmi_merged.geno
+snpoutfilename:     palaeofaeces_souilmi_merged.snp
+indoutfilename:     palaeofaeces_souilmi_merged.ind
+outputformat: EIGENSTRAT

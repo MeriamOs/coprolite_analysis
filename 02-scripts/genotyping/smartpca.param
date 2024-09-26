@@ -1,0 +1,10 @@
+genotypename:  palaeofaeces_souilmi_merged.geno
+snpname:   palaeofaeces_souilmi_merged.snp
+indivname:   palaeofaeces_souilmi_merged_modified.ind
+evecoutname:  palaeofaeces_souilmi_merged_dingo_singing_village.evec
+evaloutname:   palaeofaeces_souilmi_merged_dingo_singing_village.eval
+poplistname: population_list.txt
+#maxpops: 175
+lsqproject: YES
+
+
