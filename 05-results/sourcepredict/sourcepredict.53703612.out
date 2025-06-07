@@ -1,0 +1,273 @@
+Step 1: Checking for unknown proportion
+  == Sample: MS11679_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11679_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11669_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11669_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11774_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11774_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11675_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11675_kraken_2024-standard_conf0
+		 known:92.36%
+		 unknown:7.64%
+  == Sample: MS11683_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11683_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11686_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11686_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11673_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11673_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11771_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11771_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11775_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 0.98
+	----------------------
+	- Sample: MS11775_kraken_2024-standard_conf0
+		 known:71.55%
+		 unknown:28.45%
+  == Sample: MS11677_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11677_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11670_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11670_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11770_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11770_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11676_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11676_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11674_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11674_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11684_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11684_kraken_2024-standard_conf0
+		 known:97.06%
+		 unknown:2.94%
+  == Sample: MS11678_kraken_2024-standard_conf0 ==
+	Adding unknown
+	Normalizing (GMPR)
+	Computing Bray-Curtis distance
+	Performing MDS embedding in 2 dimensions
+	KNN machine learning
+	Training KNN classifier on 8 cores...
+	-> Testing Accuracy: 1.0
+	----------------------
+	- Sample: MS11678_kraken_2024-standard_conf0
+		 known:50.62%
+		 unknown:49.38%
+Step 2: Checking for source proportion
+	Computing weighted_unifrac distance on species rank
+	 Warning: ``taxa`` is required for phylogenetic diversity metrics.
+	There is a polytomy ar the root of this taxonomic tree. 
+	Unifrac distances wont't  work properly. 
+	Computing  Bray-Curtis distance instead.
+                
+Saved self.wu to self_wu_output.csv
+	TSNE embedding in 2 dimensions
+	KNN machine learning
+	Performing 5 fold cross validation on 8 cores...
+	Trained KNN classifier with 10 neighbors
+	-> Testing Accuracy: 0.9
+	----------------------
+	- Sample: MS11679_kraken_2024-standard_conf0
+		 Canis_familiaris:84.56%
+		 Homo_sapiens:0.0%
+		 Sediment:15.44%
+	- Sample: MS11669_kraken_2024-standard_conf0
+		 Canis_familiaris:36.41%
+		 Homo_sapiens:0.0%
+		 Sediment:63.59%
+	- Sample: MS11774_kraken_2024-standard_conf0
+		 Canis_familiaris:62.79%
+		 Homo_sapiens:0.0%
+		 Sediment:37.21%
+	- Sample: MS11675_kraken_2024-standard_conf0
+		 Canis_familiaris:53.61%
+		 Homo_sapiens:0.0%
+		 Sediment:46.39%
+	- Sample: MS11683_kraken_2024-standard_conf0
+		 Canis_familiaris:84.55%
+		 Homo_sapiens:0.0%
+		 Sediment:15.45%
+	- Sample: MS11686_kraken_2024-standard_conf0
+		 Canis_familiaris:91.24%
+		 Homo_sapiens:0.0%
+		 Sediment:8.76%
+	- Sample: MS11673_kraken_2024-standard_conf0
+		 Canis_familiaris:14.76%
+		 Homo_sapiens:0.0%
+		 Sediment:85.24%
+	- Sample: MS11771_kraken_2024-standard_conf0
+		 Canis_familiaris:7.51%
+		 Homo_sapiens:0.0%
+		 Sediment:92.49%
+	- Sample: MS11775_kraken_2024-standard_conf0
+		 Canis_familiaris:91.95%
+		 Homo_sapiens:0.0%
+		 Sediment:8.05%
+	- Sample: MS11677_kraken_2024-standard_conf0
+		 Canis_familiaris:82.35%
+		 Homo_sapiens:0.0%
+		 Sediment:17.65%
+	- Sample: MS11670_kraken_2024-standard_conf0
+		 Canis_familiaris:19.18%
+		 Homo_sapiens:0.0%
+		 Sediment:80.82%
+	- Sample: MS11770_kraken_2024-standard_conf0
+		 Canis_familiaris:36.04%
+		 Homo_sapiens:0.0%
+		 Sediment:63.96%
+	- Sample: MS11676_kraken_2024-standard_conf0
+		 Canis_familiaris:20.19%
+		 Homo_sapiens:0.0%
+		 Sediment:79.81%
+	- Sample: MS11674_kraken_2024-standard_conf0
+		 Canis_familiaris:16.38%
+		 Homo_sapiens:0.0%
+		 Sediment:83.62%
+	- Sample: MS11684_kraken_2024-standard_conf0
+		 Canis_familiaris:39.63%
+		 Homo_sapiens:0.0%
+		 Sediment:60.37%
+	- Sample: MS11678_kraken_2024-standard_conf0
+		 Canis_familiaris:40.64%
+		 Homo_sapiens:0.0%
+		 Sediment:59.36%
+Sourcepredict result written to coproid.kuri.standard2024.march2025.50cutoff.sourcepredict.csv
+Embedding coordinates written to coproid.kuri.standard2024.march2025.50cutoff.embedding.csv
