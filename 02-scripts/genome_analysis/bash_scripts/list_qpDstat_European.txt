@@ -1,0 +1,119 @@
+Jackal BorderCollie MS11669 MS11674
+Jackal BeardedCollie MS11669 MS11674
+Jackal Rottweiler MS11669 MS11674
+Jackal GermanShepherd MS11669 MS11674
+Jackal GoldenRetriever MS11669 MS11674
+Jackal Greyhound MS11669 MS11674
+Jackal LabradorRetriever MS11669 MS11674
+
+Jackal BorderCollie MS11669 MS11675
+Jackal BeardedCollie MS11669 MS11675
+Jackal Rottweiler MS11669 MS11675
+Jackal GermanShepherd MS11669 MS11675
+Jackal GoldenRetriever MS11669 MS11675
+Jackal Greyhound MS11669 MS11675
+Jackal LabradorRetriever MS11669 MS11675
+
+Jackal BorderCollie MS11669 MS11676
+Jackal BeardedCollie MS11669 MS11676
+Jackal Rottweiler MS11669 MS11676
+Jackal GermanShepherd MS11669 MS11676
+Jackal GoldenRetriever MS11669 MS11676
+Jackal Greyhound MS11669 MS11676
+Jackal LabradorRetriever MS11669 MS11676
+
+Jackal BorderCollie MS11669 MS11677
+Jackal BeardedCollie MS11669 MS11677
+Jackal Rottweiler MS11669 MS11677
+Jackal GermanShepherd MS11669 MS11677
+Jackal GoldenRetriever MS11669 MS11677
+Jackal Greyhound MS11669 MS11677
+Jackal LabradorRetriever MS11669 MS11677
+
+Jackal BorderCollie MS11669 MS11678
+Jackal BeardedCollie MS11669 MS11678
+Jackal Rottweiler MS11669 MS11678
+Jackal GermanShepherd MS11669 MS11678
+Jackal GoldenRetriever MS11669 MS11678
+Jackal Greyhound MS11669 MS11678
+Jackal LabradorRetriever MS11669 MS11678
+
+Jackal BorderCollie MS11670 MS11674
+Jackal BeardedCollie MS11670 MS11674
+Jackal Rottweiler MS11670 MS11674
+Jackal GermanShepherd MS11670 MS11674
+Jackal GoldenRetriever MS11670 MS11674
+Jackal Greyhound MS11670 MS11674
+Jackal LabradorRetriever MS11670 MS11674
+Jackal BorderCollie MS11670 MS11674
+
+Jackal BorderCollie MS11670 MS11675
+Jackal BeardedCollie MS11670 MS11675
+Jackal Rottweiler MS11670 MS11675
+Jackal GermanShepherd MS11670 MS11675
+Jackal GoldenRetriever MS11670 MS11675
+Jackal Greyhound MS11670 MS11675
+Jackal LabradorRetriever MS11670 MS11675
+Jackal BorderCollie MS11670 MS11675
+
+Jackal BorderCollie MS11670 MS11676
+Jackal BeardedCollie MS11670 MS11676
+Jackal Rottweiler MS11670 MS11676
+Jackal GermanShepherd MS11670 MS11676
+Jackal GoldenRetriever MS11670 MS11676
+Jackal Greyhound MS11670 MS11676
+Jackal LabradorRetriever MS11670 MS11676
+Jackal BorderCollie MS11670 MS11676
+
+Jackal BorderCollie MS11670 MS11677
+Jackal BeardedCollie MS11670 MS11677
+Jackal Rottweiler MS11670 MS11677
+Jackal GermanShepherd MS11670 MS11677
+Jackal GoldenRetriever MS11670 MS11677
+Jackal Greyhound MS11670 MS11677
+Jackal LabradorRetriever MS11670 MS11677
+Jackal BorderCollie MS11670 MS11677
+
+Jackal BorderCollie MS11670 MS11678
+Jackal BeardedCollie MS11670 MS11678
+Jackal Rottweiler MS11670 MS11678
+Jackal GermanShepherd MS11670 MS11678
+Jackal GoldenRetriever MS11670 MS11678
+Jackal Greyhound MS11670 MS11678
+Jackal LabradorRetriever MS11670 MS11678
+Jackal BorderCollie MS11670 MS11678
+
+Jackal BeardedCollie MS11673 MS11674
+Jackal Rottweiler MS11673 MS11674
+Jackal GermanShepherd MS11673 MS11674
+Jackal GoldenRetriever MS11673 MS11674
+Jackal Greyhound MS11673 MS11674
+Jackal LabradorRetriever MS11673 MS11674
+
+Jackal BeardedCollie MS11673 MS11675
+Jackal Rottweiler MS11673 MS11675
+Jackal GermanShepherd MS11673 MS11675
+Jackal GoldenRetriever MS11673 MS11675
+Jackal Greyhound MS11673 MS11675
+Jackal LabradorRetriever MS11673 MS11675
+
+Jackal BeardedCollie MS11673 MS11676
+Jackal Rottweiler MS11673 MS11676
+Jackal GermanShepherd MS11673 MS11676
+Jackal GoldenRetriever MS11673 MS11676
+Jackal Greyhound MS11673 MS11676
+Jackal LabradorRetriever MS11673 MS11676
+
+Jackal BeardedCollie MS11673 MS11677
+Jackal Rottweiler MS11673 MS11677
+Jackal GermanShepherd MS11673 MS11677
+Jackal GoldenRetriever MS11673 MS11677
+Jackal Greyhound MS11673 MS11677
+Jackal LabradorRetriever MS11673 MS11677
+
+Jackal BeardedCollie MS11673 MS11678
+Jackal Rottweiler MS11673 MS11678
+Jackal GermanShepherd MS11673 MS11678
+Jackal GoldenRetriever MS11673 MS11678
+Jackal Greyhound MS11673 MS11678
+Jackal LabradorRetriever MS11673 MS11678

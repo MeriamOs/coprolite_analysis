@@ -3,10 +3,11 @@ source $(conda info --base)/etc/profile.d/conda.sh
 export PYTHONNOUSERSITE=1
 
 #conda create -n admixtools -c bioconda -c conda-forge admixtools --solver classic
+#conda create -p /nesi/nobackup/uoo02328/meriam/conda_environments/admixtools -c bioconda -c conda-forge admixtools
 
-conda activate admixtools
+conda activate /nesi/nobackup/uoo02328/meriam/conda_environments/admixtools
 
-ln -s ../genotyping/merged_kuri_souilmi.* .
+ln -s ../genotyping/merged_kuri_souilmi_dingo.* .
 
 module load EIGENSOFT/7.2.1-gimkl-2018b
 
@@ -26,12 +27,12 @@ familynames:        NO")
 awk 'NR==FNR {a[NR]=$1; next} { $3 = a[FNR]; print }' merged_kuri_souilmi.fam merged_kuri_souilmi.ind \
     > merged_kuri_souilmi_modified.ind
 
-qp3Pop -p qp3pop.params >shared_drift_qp3pop.logfile
+qp3Pop -p qp3pop_dingo.params >shared_drift_qp3pop.logfile
 
 ### FILE: qp3pop.params
-#genotypename:  merged_kuri_souilmi.geno
-#snpname:   merged_kuri_souilmi.snp
-#indivname:   merged_kuri_souilmi_modified.ind
+#genotypename:  merged_kuri_souilmi_dingo.geno
+#snpname:   merged_kuri_souilmi_dingo.snp
+#indivname:   merged_kuri_souilmi_dingo_modified.ind
 #popfilename:  list_qp3test.txt
 #inbreed: YES
 #numchrom: 38
@@ -61,4 +62,14 @@ qpDstat -p qpDstat_wolves.params >admix_qpDstat_wolves.logfile
 #inbreed: YES
 #numchrom: 38
 #outgroupmode: YES
+ 
+qpDstat -p qpDstat_kuri_wolves.params >admix_qpDstat_kuri_wolves.logfile
 
+### FILE: qpDstat_kuri_wolves.params
+#genotypename:  merged_kuri_souilmi.geno
+#snpname:   merged_kuri_souilmi.snp
+#indivname:   merged_kuri_souilmi_modified.ind
+#popfilename:  list_qpDstat_kuri_wolves.txt
+#inbreed: YES
+#numchrom: 38
+#outgroupmode: YES
