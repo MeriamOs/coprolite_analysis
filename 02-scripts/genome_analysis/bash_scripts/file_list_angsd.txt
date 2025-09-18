@@ -1,0 +1,16 @@
+bam_files/MS11669_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11670_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11673_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11674_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11675_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11676_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11677_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11678_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11679_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11683_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11684_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11686_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11770_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11771_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11774_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
+bam_files/MS11775_R1_001.fastq_L0.pe.combined_udgnone.trimmed.bam
