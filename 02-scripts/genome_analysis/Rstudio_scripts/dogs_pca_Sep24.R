@@ -12,11 +12,26 @@ library(stringr)
 
 setwd("~/Documents/Rstudio/r-tidyverse")
 
-data_pca <- read_csv("merged_kuri_souilmi_rstudio_apr.csv")
-data_pca <- read_csv("merged_kuri_souilmi_rstudio.csv")
 data_pca <- read_csv("merged_kuri_souilmi_dingo_rstudio.csv")
-data_pca <- read_csv("merged_kuri_souilmi_dingo_nowolves_rstudio.csv") %>% 
-  filter(Population != "Dingo_ancient") 
+data_pca <- read_csv("merged_kuri_souilmi_dingo_nowolves_rstudio.csv") 
+
+# Read the eigenvalues file
+eigs <- scan("merged_kuri_souilmi_dingo.eval")
+eigs <- scan("merged_kuri_souilmi_dingo_nowolves.eval")
+
+total_var <- sum(eigs) # Calculate total variance
+
+percent_var <- eigs / total_var * 100 # Calculate percent variance explained
+
+# Put into a tidy dataframe
+explained <- tibble(
+  PC = paste0("PC", seq_along(eigs)),
+  Eigenvalue = eigs,
+  Percent = percent_var,
+  Cumulative = cumsum(percent_var))
+
+# Print first 10 PCs
+print(head(explained, 10))
 
 cols(Individual = col_character(), PC1 = col_double(), 
      PC2 = col_double(), PC3 = col_double(), PC4 = col_double(), 
@@ -41,7 +56,7 @@ list_alpha <- data_combined %>%
   deframe()
 
 ggplot(data = data_combined %>% arrange(Population == "BorneoVillage"), 
-       aes(x = PC1, y = PC2, colour = Population, shape = Population,
+       aes(x = PC1, y = PC3, colour = Population, shape = Population,
                              alpha = Population)) +
           scale_alpha_manual(values = list_alpha) +
           scale_colour_manual(values = list_colour,
@@ -69,63 +84,22 @@ ggplot(data = data_combined %>% arrange(Population == "BorneoVillage"),
             #              "Dingo","NG Singing dog", "Kuri")
             ) +
 #  guides(colour = guide_legend(ncol = 2)) +
-  xlab("PC1 (3.7 %)") +
-  ylab("PC3 (1.7 %)") +
+  xlab(paste0("PC1 (", round(explained$Percent[explained$PC == "PC1"], 1), "%)")) +
+#  ylab(paste0("PC2 (", round(explained$Percent[explained$PC == "PC2"], 1), "%)")) +
+  ylab(paste0("PC3 (", round(explained$Percent[explained$PC == "PC3"], 1), "%)")) +
   geom_point(size = 3) +
   theme(legend.title = element_text(size = 18),
-        legend.text = element_text(size = 16),
-#        legend.position = "bottom",  # Move the legend to the bottom
-#        legend.direction = "horizontal",
+        legend.text = element_text(size = 15),
+        legend.position = "bottom",  # Move the legend to the bottom
+        legend.direction = "horizontal",
 #        plot.title = element_text(size = 16PCA_nuclear_DNA_subset_dogs_shrink_lsq, face = "bold", , hjust = 0.5),
         axis.text.x = element_text(size = 16), 
         axis.title.x = element_text(size = 18),
         axis.title.y = element_text(size = 18),
         axis.text.y = element_text(size = 16))
 
-ggsave("PCA_nuclear_DNA_global_dogs_no_wolves.png", width = 10, height = 6)
-#ggsave("PCA_nuclear_DNA_global_dogs_ancient_low.png", width = 10, height = 6)
-
-### PCAngsd ###
-C <- as.matrix(read.table("merged_kuri_souilmi.cov")) # Reads estimated covariance matrix
-D <- as.matrix(read.table("merged_kuri_souilmi.selection")) # Reads PC based selection statistics
-
-samples <- read.csv("global_dogs_pca.csv", header = TRUE)
-
-# Plot PCA plot
-e <- eigen(C)
-pca_data <- as.data.frame(e$vectors[,1:2])  # Extract the first two principal components
-pca_data$Sample <- samples$Sample
-pca_data$Population <- samples$Population
-
-
-pca_kuri <- ggplot(pca_data, aes(x = V1, y = V2, colour = Population,
-                                 text = paste("Sample:", Sample))) +
-  geom_point(size = 3) +
-  labs(title = "PCA of kuri nuclear DNA - PCAngsd", x = "PC1", y = "PC2") +
-#  scale_colour_manual(values = list_colour) +
-  # scale_colour_brewer(palette = "Set1",
-  #                     limits = c("Long Bay", "Kahukura", 
-  #                                "Whenua Hou - PC", 
-  #                                "Whenua Hou - H"),
-  #                     labels = c("Long Bay pre-contact (n=4)", 
-  #                                "Kahukura pre-contact (n=4)", 
-  #                                "Whenua Hou pre-contact (n=5)", 
-  #                                "Whenua Hou post-contact (n=3)")) +
-  theme(legend.text = element_text(size = 12)) +
-  theme_minimal() +
-  theme(
-    legend.text = element_text(size = 12),  
-    legend.title = element_text(size = 14))
-
-interactive_plot <- ggplotly(pca_kuri, tooltip = "text")
-interactive_plot
-
-#htmlwidgets::saveWidget(interactive_plot, 
-#                        "interactive_barplot_top10_species_standard2024_per_sample.html")
-
-
-#ggsave("PCA_nuclear_DNA_global_PCAngsd.png", width = 12, height = 8)
-
+#ggsave("PCA_nuclear_DNA_global_dogs_no_wolves.png", width = 10, height = 6)
+ggsave("PCA_nuclear_DNA_global_dogs_ancient.png", width = 10, height = 6)
 
 ##########################
 ### SUBSET GLOBAL DOGS ###
@@ -139,6 +113,22 @@ data_pca <- read_csv("merged_kuri_souilmi_dingo_subset_shrink2_rstudio.csv") %>%
 cols(Individual = col_character(), PC1 = col_double(), 
      PC2 = col_double(), PC3 = col_double(), 
      PC4 = col_double(), Population = col_character())
+
+eigs <- scan("merged_kuri_souilmi_dingo_subset_shrink.eval")
+
+total_var <- sum(eigs) # Calculate total variance
+
+percent_var <- eigs / total_var * 100 # Calculate percent variance explained
+
+# Put into a tidy dataframe
+explained <- tibble(
+  PC = paste0("PC", seq_along(eigs)),
+  Eigenvalue = eigs,
+  Percent = percent_var,
+  Cumulative = cumsum(percent_var))
+
+# Print first 10 PCs
+print(head(explained, 10))
 
 data_meta <- read_csv("dogs_pca_population_list_subset.csv")
 cols(Population = col_character(), colorNr = col_character(), symbolNr = col_double())
@@ -184,8 +174,8 @@ ggplot(data = data_combined %>%
                             "New Guinea singing dog", "Village dog Borneo", 
                             "Village dog Vietnam", "Village dog China", "Village Taiwan", 
                             "Chow chow", "Xiasi", "Jindo")) + 
-  xlab("PC1 (20.5%)") +
-  ylab("PC4 (6.9%)") +
+  xlab(paste0("PC1 (", round(explained$Percent[explained$PC == "PC1"], 1), "%)")) +
+  ylab(paste0("PC4 (", round(explained$Percent[explained$PC == "PC4"], 1), "%)")) +
   geom_point(size = 5) +
   theme(legend.title = element_text(size = 18),
         legend.text = element_text(size = 16),
@@ -197,70 +187,7 @@ ggplot(data = data_combined %>%
         legend.position = "bottom",  # Move the legend to the bottom
         legend.direction = "horizontal")
 
-ggsave("PCA_nuclear_DNA_subset_dogs_shrink_lsq_PC1_PC4.png", width = 10, height = 7)
-
-
-### PCAngsd ###
-C <- as.matrix(read.table("merged_kuri_souilmi_subset.cov")) # Reads estimated covariance matrix
-D <- as.matrix(read.table("merged_kuri_souilmi_subset.selection")) # Reads PC based selection statistics
-
-samples <- read.csv("angsd_numbers_subset.csv", header = TRUE)
-
-# Plot PCA plot
-e <- eigen(C)
-pca_data <- as.data.frame(e$vectors[,1:2])  # Extract the first two principal components
-pca_data$Sample <- samples$Sample
-pca_data$Site <- samples$Site
-pca_data$Sex <- samples$Sex
-
-pca_kuri <- ggplot(pca_data, aes(x = V1, y = V2, colour = Site,
-                                 text = paste("Sample:", Sample))) +
-  geom_point(size = 5) +
-  labs(title = "PCA of kuri nuclear DNA - PCAngsd", x = "PC1", y = "PC2") +
-  scale_colour_manual(values = list_colour, 
-                      limits = c("Kuri", "Dingo",
-                                 "NewGuineaSingingDog", "BorneoVillage", "VietnamVillage",
-                                 "ChinaVillage", "ChowChow", "XiasiDog"),
-                      labels = c("Kuri", "Dingo",
-                                 "New Guinea singing dog", "Village dog Borneo", 
-                                 "Village dog Vietnam", "Village dog China", 
-                                 "Chow chow", "Xiasi Dog")) +
-  theme(legend.title = element_text(size = 16),
-        legend.text = element_text(size = 16),
-        plot.title = element_text(size = 16, face = "bold", , hjust = 0.5),
-        axis.text.x = element_text(size = 14), 
-        axis.title.x = element_text(size = 16),
-        axis.title.y = element_text(size = 16),
-        axis.text.y = element_text(size = 14),
-        legend.position = "bottom",  # Move the legend to the bottom
-        legend.direction = "horizontal")
-
-interactive_plot <- ggplotly(pca_kuri, tooltip = "text")
-interactive_plot
-
-#htmlwidgets::saveWidget(interactive_plot, 
-#                        "interactive_barplot_top10_species_standard2024_per_sample.html")
-
-
-ggsave("PCA_nuclear_DNA_global_subset_PCAngsd.png", width = 12, height = 8)
-
-
-inbreed <- read.csv("merged_kuri_souilmi_subset_inbreed.inbreed.samples", 
-                    header = FALSE)
-colnames(inbreed) <- c("Coefficient") 
-                    
-samples <- read.csv("merged_kuri_souilmi_subset.fam", sep = " ",
-                    header = FALSE)
-colnames(samples) <- c("Population", "Sample", "1",
-                       "2", "3", "Phenotype")
-
-inbreed$Sample <- samples$Sample
-inbreed$Population <- samples$Population
-
-ggplot(inbreed, aes(x = Population, y = Coefficient, 
-                    fill = Population)) +
-  geom_boxplot() +
-  geom_point() 
+ggsave("PCA_nuclear_DNA_subset_dogs_shrink_lsq_PC1_PC4.png", width = 10, height = 6)
 
 ######################
 ### KURI ONLY PLOT ###
@@ -272,7 +199,6 @@ data_pca <- read_csv("angsd_bam_trimmed_SE_geno08_maf0.33_no_damage_rstudio.csv"
 data_pca <- read_csv("angsd_bam_trimmed_SE_geno08_maf0.4_no_damage_rstudio.csv")
 data_pca <- read_csv("angsd_bam_trimmed_SE_geno08_no_damage_shared_sites_rstudio.csv")
 data_pca <- read_csv("pileupcaller.single.maf0.01_rstudio.csv")
-
 
 cols(Individual = col_character(), 
      PC1 = col_double(), PC2 = col_double(), 
@@ -343,7 +269,7 @@ file <- "pileupcaller.single.pcangsd"
 file <- "angsd_bam_trimmed_GL"
 
 C <- as.matrix(read.table(paste0(file, ".cov"))) # Reads estimated covariance matrix
-#D <- as.matrix(read.table(paste0(file, ".selection"))) # Reads PC based selection statistics
+D <- as.matrix(read.table(paste0(file, ".selection"))) # Reads PC based selection statistics
 
 samples <- read.csv("angsd_numbers.csv", header = TRUE)
 samples_sorted <- samples[order(samples$angsd), ]
@@ -379,7 +305,6 @@ ggplot(pca_data, aes(x = V1, y = V2, colour = Site,
                                  "Whenua Hou pre-contact (n=5)", 
                                  "Whenua Hou post-contact (n=3)")) +
   geom_point(size = 5) +
-  theme(legend.text = element_text(size = 12)) +
   theme(plot.title = element_text(size = 16, face = "bold", , hjust = 0.5),
                       axis.title.x = element_text(size = 16),
                       axis.text.x = element_text(size = 14), 
@@ -403,19 +328,25 @@ ggsave("PCA_nuclear_DNA_kuri_pileupcaller.png", width = 10, height = 8)
 #ggsave("PCA_nuclear_DNA_kuri_PCAngsd_no_damage_shared.png", width = 10, height = 8)
 ggsave("PCA_nuclear_DNA_kuri_PCAngsd_GL.png", width = 10, height = 8)
 
-# Obtain p-values from PC-based selection scan
-p <- pchisq(D, 1, lower.tail=FALSE) %>%
-  as.data.frame()
-head(p)
 
-#M <- as.matrix(read.csv("pileupcaller.double.pcangsd.matrix.csv",
-#                        row.names = 1)) 
-#heatmap(M)
+### Barplot of covered SNPs per sample for SNP panel dataset
+## All samples have ~4.5% of non reference SNPs
 
 SNP_stats <- read_csv("SNP_stats.csv")
 
 ggplot(SNP_stats, aes(x = Sample, y = CoveredSites)) +
   geom_col() +
-  geom_col(aes(x = Sample, y = NonReferenceSNPs, fill = "purple"))
+  geom_col(aes(x = Sample, y = NonReferenceSNPs, 
+               fill = "Non reference SNPs")) +
+  theme(plot.title = element_text(size = 16, 
+                                  face = "bold", , hjust = 0.5),
+        axis.title.x = element_text(size = 16),
+        axis.text.x = element_text(size = 14, angle = 90), 
+        axis.title.y = element_text(size = 16),
+        axis.text.y = element_text(size = 14),
+        legend.title = element_text(size = 16, face = "bold"),
+        legend.text = element_text(size = 16),
+        legend.position = "bottom",  
+        legend.direction = "horizontal")
 
-
+ggsave("Non_reference_SNPs_stats_barplots.png", width = 10, height = 8)
