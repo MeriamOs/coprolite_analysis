@@ -1,3 +1,8 @@
+#Script written by Meriam van Os
+#Used for downstream analysis of metagenomic shotgun data from kuri (dog) palaeofaeces
+#Uploaded 18/09/2025
+
+
 library(tibble)
 library(dplyr)
 library(readr)
@@ -12,6 +17,7 @@ library(stringr)
 
 setwd("~/Documents/Rstudio/r-tidyverse")
 
+# Read the pca file
 data_pca <- read_csv("merged_kuri_souilmi_dingo_rstudio.csv")
 data_pca <- read_csv("merged_kuri_souilmi_dingo_nowolves_rstudio.csv") 
 
@@ -179,7 +185,6 @@ ggplot(data = data_combined %>%
   geom_point(size = 5) +
   theme(legend.title = element_text(size = 18),
         legend.text = element_text(size = 16),
-        #        plot.title = element_text(size = 16PCA_nuclear_DNA_subset_dogs_shrink_lsq, face = "bold", , hjust = 0.5),
         axis.text.x = element_text(size = 16), 
         axis.title.x = element_text(size = 18),
         axis.title.y = element_text(size = 18),
@@ -249,11 +254,8 @@ ggplot(data = data_combined, # %>% arrange(desc(Population)),
               legend.direction = "horizontal") +
         guides(colour = guide_legend(ncol = 2))
 
-interactive_plot <- ggplotly(pca_kuri, tooltip = "text")
-interactive_plot
-
-#htmlwidgets::saveWidget(interactive_plot, 
-#                        "interactive_barplot_top10_species_standard2024_per_sample.html")
+#interactive_plot <- ggplotly(pca_kuri, tooltip = "text")
+#interactive_plot
 
 ggsave("PCA_nuclear_DNA_kuri_smartPCA_pileupcaller.png", width = 10, height = 8)
 ggsave("PCA_nuclear_DNA_kuri_smartPCA_angsd_no_damage_maf0.25.png", width = 10, height = 8)
@@ -317,11 +319,8 @@ ggplot(pca_data, aes(x = V1, y = V2, colour = Site,
   guides(colour = guide_legend(ncol = 2)) +
   guides(shape = guide_legend(ncol = 1))
 
-interactive_plot <- ggplotly(pca_kuri, tooltip = "text")
-interactive_plot
-
-#htmlwidgets::saveWidget(interactive_plot, 
-#                        "interactive_barplot_top10_species_standard2024_per_sample.html")
+#interactive_plot <- ggplotly(pca_kuri, tooltip = "text")
+#interactive_plot
 
 ggsave("PCA_nuclear_DNA_kuri_pileupcaller.png", width = 10, height = 8)
 #ggsave("PCA_nuclear_DNA_kuri_PCAngsd_no_damage_maf0.25.png", width = 10, height = 8)
