@@ -24,7 +24,7 @@ cd /nesi/nobackup/uoo02328/meriam/coprolite_analysis/04-analysis
 
 nextflow run nf-core/eager \
 -r 2.5.0 \
--c 02_eager.config \
+-c eager.config \
 -profile singularity \
 --outdir '/nesi/nobackup/uoo02328/meriam/coprolite_analysis/04-analysis/canis_mtDNA/' \
 --input '/nesi/nobackup/uoo02328/meriam/coprolite_analysis/03-data/NZ_coprolites/*_R{1,2}_001.fastq.gz' \

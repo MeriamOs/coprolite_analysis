@@ -1,5 +1,9 @@
 module load Python/3.11.6-foss-2023a
 
+###################################
+#### DATASET: PRE-CONTACT ONLY ####
+###################################
+
 python custom_freq_count.py
 
 ### SCRIPT: custom_freq_count.py
@@ -89,6 +93,33 @@ python calculate_SFS_alt_allele.py
 #plt.tight_layout()
 #plt.savefig("angsd_bam_trimmed_SE_no_post_04_haploid_alt_sfs_plot.png", dpi=300)
 
+###########################
+#### DATASET: ALL KURI ####
+###########################
+
+### Change python custom_freq_count.py:
+#input_vcf = "../angsd_bam_trimmed_SE_all_05_haploid.vcf"
+#output_frq = "angsd_bam_trimmed_SE_all_05_haploid_custom.frq"
+
+### and calculate_SFS_alt_allele.py 
+#df = pd.read_csv("angsd_bam_trimmed_all_05_haploid_custom.frq", delim_whitespace=True)
+#plt.savefig("angsd_bam_trimmed_SE_all_05_haploid_alt_sfs_plot.png", dpi=300)
+
+python custom_freq_count.py
+
+python calculate_SFS_alt_allele.py 
+
+###All samples
+#Loaded 211471754 rows from the .frq file
+#0       206790246
+#1       4484395
+#2       183208
+#3       9718
+#4       3325
+#5       721
+#6       125
+#7       14
+#8       2
 
 ###########################
 #### per arch site SFS ####

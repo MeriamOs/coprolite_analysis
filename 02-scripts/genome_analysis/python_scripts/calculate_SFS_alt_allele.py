@@ -2,10 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the full file
+df = pd.read_csv("angsd_bam_trimmed_SE_all_05_haploid_custom.frq", delim_whitespace=True)
 #df = pd.read_csv("angsd_bam_trimmed_SE_no_post_04_haploid_custom.frq", delim_whitespace=True)
-#df = pd.read_csv("angsd_bam_trimmed_SE_no_post_04_haploid_LB_custom.frq", delim_whitespace=True)
-#df = pd.read_csv("angsd_bam_trimmed_SE_no_post_04_haploid_WH_custom.frq", delim_whitespace=True)
-df = pd.read_csv("angsd_bam_trimmed_SE_no_post_04_haploid_KH_custom.frq", delim_whitespace=True)
 
 print(f"Loaded {len(df)} rows from the .frq file")
 
@@ -30,7 +28,5 @@ plt.ylabel("Number of Sites")
 plt.title("Site Frequency Spectrum (including fixed sites)")
 plt.tight_layout()
 
+plt.savefig("angsd_bam_trimmed_SE_all_05_haploid_alt_sfs_plot.png", dpi=300)
 #plt.savefig("angsd_bam_trimmed_SE_no_post_04_haploid_alt_sfs_plot.png", dpi=300)
-#plt.savefig("angsd_bam_trimmed_SE_no_post_04_haploid_LB_alt_sfs_plot.png", dpi=300)
-#plt.savefig("angsd_bam_trimmed_SE_no_post_04_haploid_WH_alt_sfs_plot.png", dpi=300)
-plt.savefig("angsd_bam_trimmed_SE_no_post_04_haploid_KH_alt_sfs_plot.png", dpi=300)

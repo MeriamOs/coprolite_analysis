@@ -1,14 +1,10 @@
 import csv
 
+input_vcf = "../angsd_bam_trimmed_SE_all_05_haploid.vcf"
 #input_vcf = "../angsd_bam_trimmed_SE_no_post_04_haploid.vcf"
-#input_vcf = "angsd_bam_trimmed_SE_no_post_04_haploid_LB.vcf"
-#input_vcf = "angsd_bam_trimmed_SE_no_post_04_haploid_WH.vcf"
-input_vcf = "angsd_bam_trimmed_SE_no_post_04_haploid_KH.vcf"
 
+output_frq = "angsd_bam_trimmed_SE_all_05_haploid_custom.frq"
 #output_frq = "angsd_bam_trimmed_SE_no_post_04_haploid_custom.frq"
-#output_frq = "angsd_bam_trimmed_SE_no_post_04_haploid_LB_custom.frq"
-#output_frq = "angsd_bam_trimmed_SE_no_post_04_haploid_WH_custom.frq"
-output_frq = "angsd_bam_trimmed_SE_no_post_04_haploid_KH_custom.frq"
 
 with open(input_vcf, "r") as fin, open(output_frq, "w", newline="") as fout:
     reader = csv.reader(fin, delimiter="\t")
