@@ -22,7 +22,7 @@ This repository contains the scripts and results of the analyses on NGS data fro
     - COI_region/ <br>
     - mitochondrion/ <br>
     - plants/ <br>
-- geontyping/ <br>
+- genotyping/ <br>
 - kinship/ <br>
 - kraken/ <br>
 - maaslin_kuri_CLR_figures/ <br>
