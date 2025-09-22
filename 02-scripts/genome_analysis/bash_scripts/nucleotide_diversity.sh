@@ -1,8 +1,17 @@
+#!/bin/bash -e
+#SBATCH --account=uoo02328
+#SBATCH --job-name=pi
+#SBATCH --time=1:00:00
+#SBATCH --mem=100G
+#SBATCH --mail-type=ALL
+#SBATCH --output pi.%j.out # CHANGE map1 part each run
+#SBATCH --error pi.%j.err # CHANGE map1 part each runmodule purge
+
 module load PLINK/1.09b6.16
 
-#####################
-#### GENOME WIDE ####
-#####################
+###################################
+#### DATASET: PRE-CONTACT ONLY ####
+###################################
 
 #includes autosomes and X chromosome
 #use dataset that is not filtered with maf to retain non variable positions
@@ -84,41 +93,50 @@ python count_covered_positions_windows.py
 #result_df = pd.DataFrame(window_counts)
 #result_df.to_csv('positions_counts_per_10kb_window.tsv', sep='\t', index=False)
 
-
 ###########################
-#### WINDOW ANNOTATION ####
+#### DATASET: ALL KURI ####
 ###########################
 
-#downloaded annotation *.gff from GenBank, GCF_000002285.3
+module purge
+module load PLINK/1.09b6.16
 
-#cp genomic.gff genome_canFam3.1_annotations.gff
+#use dataset that is not filtered with maf to retain non variable positions
+plink --bfile ../angsd_bam_trimmed_SE_geno08 --biallelic-only --geno 0.5 \
+       --dog --make-bed --out angsd_bam_trimmed_SE_geno05_all --snps-only
 
-awk '$3 == "gene"' genome_canFam3.1_annotations.gff > genes_only_canFam3.1_annotations.gff3
-awk 'FNR==NR {map[$3]=$1; next} {if($1 in map) $1=map[$1]; print}' OFS="\t" \
-    chromosome_sequence_mapping.tsv genes_only_canFam3.1_annotations.gff3 \
-    > genes_only_canFam3.1_annotations_names_fixed.gff3
+plink --bfile angsd_bam_trimmed_SE_geno05_all --dog \
+       --recode vcf --out angsd_bam_trimmed_SE_geno05_all
 
-awk 'BEGIN{OFS="\t"} {print $1, $4-1, $5, $9}' \
-        genes_only_canFam3.1_annotations_names_fixed.gff3 \
-        > genes_only_canFam3.1.bed
+module purge
+module load BCFtools/1.19-GCC-11.3.0
 
-module load BEDTools/2.31.1-GCC-12.3.0
+bcftools +fixploidy angsd_bam_trimmed_SE_geno05_all.vcf -- -s samples_bcftools.txt -f 1 \
+       | bcftools view -i 'F_MISSING <= 0.5' \
+       | bcftools view -i 'REF!="C" || ALT!="T"' \
+       | bcftools view -i 'REF!="T" || ALT!="C"' -Ov -o angsd_bam_trimmed_SE_all_05_haploid.vcf
+#211,471,754 variants remaining
 
-awk 'NR>1 {print $1"\t"($2)"\t"$3"\t"$4"\t"$5}' \
-    angsd_bam_trimmed_SE_no_post_04_haploid.windowed.pi \
-    > angsd_bam_trimmed_SE_no_post_04_haploid.windowed.bed
+vcftools --vcf angsd_bam_trimmed_SE_all_05_haploid.vcf --window-pi 10000 \
+       --haploid --out angsd_bam_trimmed_SE_all_05_haploid
 
-awk 'NR>1 {print $1"\t"($2)"\t"($2+9999)"\t"$3"\t"$4}' \
-    angsd_bam_trimmed_SE_no_post_04_haploid.Tajima.D \
-    > angsd_bam_trimmed_SE_no_post_04_haploid.Tajima.D.bed
+vcftools --vcf angsd_bam_trimmed_SE_all_05_haploid.vcf --TajimaD 10000 \
+       --haploid --out angsd_bam_trimmed_SE_all_05_haploid
 
-bedtools intersect -a angsd_bam_trimmed_SE_no_post_04_haploid.windowed.bed \
-    -b ../../genotyping/pileupcaller_analysis/genes_only_canFam3.1.bed \
-    -wa -wb > angsd_bam_trimmed_SE_no_post_04_haploid_annotated.bed
+module purge
+module load Python/3.11.6-foss-2023a
 
-bedtools intersect -a angsd_bam_trimmed_SE_no_post_04_haploid.Tajima.D.bed \
-    -b ../../genotyping/pileupcaller_analysis/genes_only_canFam3.1.bed \
-    -wa -wb > angsd_bam_trimmed_SE_no_post_04_haploid_annotated.Tajima.D.bed
+#change start and end of count_covered_positions_windows.py
+
+### SCRIPT: count_covered_positions_windows.py
+#
+## Parameters
+#vcf_file = "angsd_bam_trimmed_SE_all_05_haploid.vcf" 
+#window_size = 10000
+## Convert to DataFrame and save
+#result_df = pd.DataFrame(window_counts)
+#result_df.to_csv('positions_counts_per_10kb_window_all_samples.tsv', sep='\t', index=False)
+
+python count_covered_positions_windows.py
 
 #########################
 #### MITOGENOMES VCF ####
@@ -144,3 +162,5 @@ vcftools --vcf kuri_all_mtdna_haploid.vcf --window-pi 1000 \
 
 awk 'NR > 1 {sum += $5} END {print "Mean PI:", sum / (NR - 1)}' \
        kuri_all_mtdna_pi.windowed.pi 
+
+#Mean PI: 0.00018453
