@@ -1,0 +1,17 @@
+Using 24 threads.
+Data from:
+   MS11677_contammix.bam 
+consist of 23387 reads, considered as a mixture of 47 possible genomes.
+Crude contamination upper bound: 447 out of 23387 reads (1.9%) match another
+genome better than the consensus (error rate is 0.0063).
+
+quantiles from n = 49895 samples (after discarding burnin of 105)
+     2.5%     97.5% 
+0.9861755 0.9933360 
+MAP authentic: 0.9906335 
+Potential scale reduction factors:
+
+     Point est. Upper C.I.
+[1,]          1          1
+
+Saving figure to MS11677_contamMix.pdf 
