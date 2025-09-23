@@ -36,6 +36,4 @@ mv meansP0_AncientDNA_normalized_READv2 meansP0_AncientDNA_normalized_maf0.01_me
 mv Read_Results.tsv Read_Results_maf0.01_mean.tsv
 mv READ.pdf READ_maf0.01_mean.pdf
 
-##focus on results with at least 10,000 overlapping SNPs
-
 conda deactivate
