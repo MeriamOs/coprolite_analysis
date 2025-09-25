@@ -1,1 +1,0 @@
-Lactococcus_petauri	startpos	endpos	numreads	covbases	coverage	meandepth	meanbaseq	meanmapq
