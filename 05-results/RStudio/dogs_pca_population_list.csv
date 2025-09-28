@@ -1,0 +1,17 @@
+﻿Population,colorNr,symbolNr,symbolNr2,alpha
+Jackal,black,17,17,0.6
+Fox,black,16,16,0.6
+Dhole,black,15,15,0.6
+Coyote,black,14,14,0.6
+Wolf,darkgrey,17,17,0.6
+Village,#CCEBC5,15,15,0.7
+Breed,#8DD3C7,16,16,0.6
+Dingo,#FDB462,16,16,0.6
+Dingo_ancient,#FDB462,1,18,0.6
+NewGuineaSingingDog,#FB8072,16,16,0.6
+NGSingingDog,#FB8072,16,16,0.6
+ChinaVillage,#BEBADA,15,15,0.6
+Basal_breed,#FFFFB3,16,16,0.6
+VietnamVillage,#B3DE69,15,15,0.6
+BorneoVillage,#BC80BD,15,15,0.6
+Kuri,#80B1D3,1,18,1
