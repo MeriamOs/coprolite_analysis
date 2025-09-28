@@ -15,38 +15,38 @@ MS11770,MS11770,Kahukura,over70,male,no,South_Island,pre-contact,Mid
 MS11771,MS11771,Kahukura,over70,male,no,South_Island,pre-contact,Mid
 MS11774,MS11774,Kahukura,over70,male,no,South_Island,pre-contact,Mid
 MS11775,MS11775,Kahukura,over70,male,no,South_Island,pre-contact,Mid
-MS11669_under50bp,MS11669,Whenua Hou historic,under50,female,no,South Island,historic,
-MS11670_under50bp,MS11670,Whenua Hou historic,under50,male,no,South Island,historic,
-MS11673_under50bp,MS11673,Whenua Hou historic,under50,female,no,South Island,historic,
-MS11674_under50bp,MS11674,Whenua Hou pre-contact,under50,female,GRP1,South Island,settlement,
-MS11675_under50bp,MS11675,Whenua Hou pre-contact,under50,male,no,South Island,settlement,
-MS11676_under50bp,MS11676,Whenua Hou pre-contact,under50,female,GRP1,South Island,settlement,
-MS11677_under50bp,MS11677,Whenua Hou pre-contact,under50,female,no,South Island,settlement,
-MS11678_under50bp,MS11678,Whenua Hou pre-contact,under50,female,GRP1,South Island,settlement,
-MS11679_under50bp,MS11679,Long Bay,under50,male,GRP2,North Island,post-Moa,
-MS11683_under50bp,MS11683,Long Bay,under50,male,GRP2,North Island,post-Moa,
-MS11684_under50bp,MS11684,Long Bay,under50,male,GRP3,North Island,post-Moa,
-MS11686_under50bp,MS11686,Long Bay,under50,female,GRP3,North Island,post-Moa,
-MS11770_under50bp,MS11770,Kahukura,under50,male,no,South Island,post-Moa,
-MS11771_under50bp,MS11771,Kahukura,under50,male,no,South Island,post-Moa,
-MS11774_under50bp,MS11774,Kahukura,under50,male,no,South Island,post-Moa,
-MS11775_under50bp,MS11775,Kahukura,under50,male,no,South Island,post-Moa,
-MS11669_over50bp,MS11669,Whenua Hou historic,over50,female,no,South Island,historic,
-MS11670_over50bp,MS11670,Whenua Hou historic,over50,male,no,South Island,historic,
-MS11673_over50bp,MS11673,Whenua Hou historic,over50,female,no,South Island,historic,
-MS11674_over50bp,MS11674,Whenua Hou pre-contact,over50,female,GRP1,South Island,settlement,
-MS11675_over50bp,MS11675,Whenua Hou pre-contact,over50,male,no,South Island,settlement,
-MS11676_over50bp,MS11676,Whenua Hou pre-contact,over50,female,GRP1,South Island,settlement,
-MS11677_over50bp,MS11677,Whenua Hou pre-contact,over50,female,no,South Island,settlement,
-MS11678_over50bp,MS11678,Whenua Hou pre-contact,over50,female,GRP1,South Island,settlement,
-MS11679_over50bp,MS11679,Long Bay,over50,male,GRP2,North Island,post-Moa,
-MS11683_over50bp,MS11683,Long Bay,over50,male,GRP2,North Island,post-Moa,
-MS11684_over50bp,MS11684,Long Bay,over50,male,GRP3,North Island,post-Moa,
-MS11686_over50bp,MS11686,Long Bay,over50,female,GRP3,North Island,post-Moa,
-MS11770_over50bp,MS11770,Kahukura,over50,male,no,South Island,post-Moa,
-MS11771_over50bp,MS11771,Kahukura,over50,male,no,South Island,post-Moa,
-MS11774_over50bp,MS11774,Kahukura,over50,male,no,South Island,post-Moa,
-MS11775_over50bp,MS11775,Kahukura,over50,male,no,South Island,post-Moa,
+MS11669_under50bp,MS11669,Whenua Hou historic,under50,female,no,South Island,post-contact,historic
+MS11670_under50bp,MS11670,Whenua Hou historic,under50,male,no,South Island,post-contact,historic
+MS11673_under50bp,MS11673,Whenua Hou historic,under50,female,no,South Island,post-contact,historic
+MS11674_under50bp,MS11674,Whenua Hou pre-contact,under50,female,GRP1,South Island,pre-contact,settlement
+MS11675_under50bp,MS11675,Whenua Hou pre-contact,under50,male,no,South Island,pre-contact,settlement
+MS11676_under50bp,MS11676,Whenua Hou pre-contact,under50,female,GRP1,South Island,pre-contact,settlement
+MS11677_under50bp,MS11677,Whenua Hou pre-contact,under50,female,no,South Island,pre-contact,settlement
+MS11678_under50bp,MS11678,Whenua Hou pre-contact,under50,female,GRP1,South Island,pre-contact,settlement
+MS11679_under50bp,MS11679,Long Bay,under50,male,GRP2,North Island,pre-contact,post-Moa
+MS11683_under50bp,MS11683,Long Bay,under50,male,GRP2,North Island,pre-contact,post-Moa
+MS11684_under50bp,MS11684,Long Bay,under50,male,GRP3,North Island,pre-contact,post-Moa
+MS11686_under50bp,MS11686,Long Bay,under50,female,GRP3,North Island,pre-contact,post-Moa
+MS11770_under50bp,MS11770,Kahukura,under50,male,no,South Island,pre-contact,post-Moa
+MS11771_under50bp,MS11771,Kahukura,under50,male,no,South Island,pre-contact,post-Moa
+MS11774_under50bp,MS11774,Kahukura,under50,male,no,South Island,pre-contact,post-Moa
+MS11775_under50bp,MS11775,Kahukura,under50,male,no,South Island,pre-contact,post-Moa
+MS11669_over50bp,MS11669,Whenua Hou historic,over50,female,no,South Island,post-contact,historic
+MS11670_over50bp,MS11670,Whenua Hou historic,over50,male,no,South Island,post-contact,historic
+MS11673_over50bp,MS11673,Whenua Hou historic,over50,female,no,South Island,post-contact,historic
+MS11674_over50bp,MS11674,Whenua Hou pre-contact,over50,female,GRP1,South Island,pre-contact,settlement
+MS11675_over50bp,MS11675,Whenua Hou pre-contact,over50,male,no,South Island,pre-contact,settlement
+MS11676_over50bp,MS11676,Whenua Hou pre-contact,over50,female,GRP1,South Island,pre-contact,settlement
+MS11677_over50bp,MS11677,Whenua Hou pre-contact,over50,female,no,South Island,pre-contact,settlement
+MS11678_over50bp,MS11678,Whenua Hou pre-contact,over50,female,GRP1,South Island,pre-contact,settlement
+MS11679_over50bp,MS11679,Long Bay,over50,male,GRP2,North Island,pre-contact,post-Moa
+MS11683_over50bp,MS11683,Long Bay,over50,male,GRP2,North Island,pre-contact,post-Moa
+MS11684_over50bp,MS11684,Long Bay,over50,male,GRP3,North Island,pre-contact,post-Moa
+MS11686_over50bp,MS11686,Long Bay,over50,female,GRP3,North Island,pre-contact,post-Moa
+MS11770_over50bp,MS11770,Kahukura,over50,male,no,South Island,pre-contact,post-Moa
+MS11771_over50bp,MS11771,Kahukura,over50,male,no,South Island,pre-contact,post-Moa
+MS11774_over50bp,MS11774,Kahukura,over50,male,no,South Island,pre-contact,post-Moa
+MS11775_over50bp,MS11775,Kahukura,over50,male,no,South Island,pre-contact,post-Moa
 Blank1_WH,Blank,blank,all,,,,,
 Blank2_WH,Blank,blank,all,,,,,
 KH_blank_1,Blank,blank,all,,,,,
