@@ -16,6 +16,7 @@ This repository contains the scripts and results of the analyses on NGS data fro
 
 - bacterial_mapping/ <br>
     - all_bacteria/ <br>
+    - fish_spoilers/ <br>
     - fusobacterium_perfoetens/ <br>
 - contammix/ <br>
 - diet_mapping/ <br>
