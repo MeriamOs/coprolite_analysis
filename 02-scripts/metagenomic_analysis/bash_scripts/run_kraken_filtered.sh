@@ -27,7 +27,7 @@ DATADIR2='/nesi/project/uoo02328/meriam/data/decontam_data'
 ## tar -xvzf k2_standard_20240904.tar.gz
 
 ref='/nesi/nobackup/uoo02328/meriam/kraken/databases/2024-standard'
-ref2='/opt/nesi/db/Kraken2/nt'
+#ref2='/opt/nesi/db/Kraken2/nt'
 
 ## run kraken
 
@@ -79,19 +79,4 @@ done
 #	--minimum-base-quality 30 \
 #	--confidence 0.50 \
 #	${DATADIR}/${sample}.unmapped.fastq.gz_lowcomplexityremoved.fq.gz 
-#done
-    
-#for sample in MS11679 MS11683 MS11684 MS11686 MS11770 MS11771 MS11774 MS11775 KH_blank_1 KH_blank_2 LB_blank_1 LB_blank_2;
-#do
-
-#kraken2 --db $ref2 \
-#	--threads 32 \
-#	--classified-out kraken-nt/${sample}_kraken_contig_conf0.50.fasta \
-#	--report kraken-nt/${sample}_kraken_conf0.50.txt \
-#	--output kraken-nt/${sample}_kraken_conf0.50 \
-#	--use-names \
-#	--gzip-compressed \
-#	--minimum-base-quality 30 \
-#	--confidence 0.50 \
-#	${DATADIR}/${sample}_R1_001.fastq_L0.pe.combined.fq.gz
 #done
