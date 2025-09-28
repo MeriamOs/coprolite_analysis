@@ -87,7 +87,7 @@ ggsave("NJ_tree_circular_global_dogs_text_no_legend.png", width = 12, height = 1
 
 # Construct Neighbor-Joining tree
 kuri_tree <- read.newick("pileupcaller.single.maf0.01_BOOSTER_tree.nwk")
-kuri_tree <- read.newick("angsd_bam_trimmed_SE_geno08_maf0.4_no_damage_BOOSTER_tree.nwk")
+kuri_tree <- read.newick("angsd_bam_trimmed_SE_geno08_maf0.25_no_damage_BOOSTER_tree.nwk")
 kuri_tree <- read.newick("angsd_bam_trimmed_SE_geno08_no_damage_shared_sites_BOOSTER_tree.nwk")
 
 site_info <- read.csv("sample_site_info.csv", header=TRUE)
@@ -105,14 +105,16 @@ ggtree(kuri_tree, layout = "rectangular") %<+% site_info +
                                "Whenua Hou pre-contact (n=5)", 
                                "Whenua Hou post-contact (n=3)")) +
   theme_tree2() +
-  ggtitle("NJ tree of kuri - angsd data geno 0.4") +
+#  ggtitle("NJ tree of kuri - angsd data geno 0.25") +
 #  ggtitle("NJ tree of kuri - angsd data shared sites") +
-#  ggtitle("NJ tree of kuri - pileupcaller") +
+  ggtitle("NJ tree of kuri - pileupcaller") +
   xlim(0, max(kuri_tree$edge.length) + 0.05) +
-  geom_nodelab(aes(label = sprintf("%.2f", as.numeric(label))), size = 3,
-               nudge_x = 0.005, colour = "red4") +
-  theme(
-        legend.key.size = unit(1, "lines"),
+  geom_nodelab(aes(label = ifelse(!is.na(as.numeric(label)),
+                   sprintf("%.2f", as.numeric(label)), ""),
+                   subset = (as.numeric(label) > 0.8)),
+                   size = 3, nudge_x = 0.01, colour = "red4", 
+                   na.rm = TRUE) +
+  theme(legend.key.size = unit(1, "lines"),
         legend.text = element_text(size = 20),
         legend.title = element_text(size = 24, face = "bold"),
         axis.text = element_blank(),
@@ -122,11 +124,13 @@ ggtree(kuri_tree, layout = "rectangular") %<+% site_info +
         legend.direction = "horizontal") +
   guides(color = guide_legend(ncol = 1, 
                               override.aes = list(size = 5))) +
-  geom_nodepoint(aes(subset = (as.numeric(label) > 0.9)), colour = "black", shape = 18, size = 3) +
+  geom_nodepoint(aes(subset = (as.numeric(label) > 0.8)), 
+                    colour = "black", shape = 18, 
+                    size = 3,, na.rm = TRUE) +
   guides(colour = guide_legend(ncol = 2))
 
 #ggsave("Midpoint_rooted_NJ_tree_kuri_pileupcaller.png", width = 10, height = 6)
-#ggsave("Midpoint_rooted_NJ_tree_kuri_angsd_geno0.4.png", width = 10, height = 6)
+ggsave("Midpoint_rooted_NJ_tree_kuri_angsd_geno0.25.png", width = 10, height = 6)
 #ggsave("Midpoint_rooted_NJ_tree_kuri_angsd_shared_sites.png", width = 10, height = 6)
 ggsave("Midpoint_rooted_NJ_tree_angsd_kuri_angsd_no_damage.png", width = 10, height = 8)
 
@@ -159,8 +163,11 @@ ggtree(kuri_tree, layout = "rectangular") %<+% site_info +
   theme_tree2() +
 #  ggtitle("NJ tree of kuri - angsd data geno 0.4") +
   xlim(0, max(kuri_tree$edge.length) + 0.125) +
-  geom_nodelab(aes(label = sprintf("%.2f", as.numeric(label))), size = 3,
-               nudge_x = 0.008, colour = "red4") +
+  geom_nodelab(aes(label = ifelse(!is.na(as.numeric(label)),
+                                  sprintf("%.2f", as.numeric(label)), ""),
+                   subset = (as.numeric(label) > 0.8)),
+                   size = 3, nudge_x = 0.01, colour = "red4", 
+                   na.rm = TRUE) +
   theme(
     legend.key.size = unit(1, "lines"),
     legend.text = element_text(size = 20),
@@ -172,7 +179,9 @@ ggtree(kuri_tree, layout = "rectangular") %<+% site_info +
     legend.direction = "horizontal") +
   guides(color = guide_legend(ncol = 1, 
                               override.aes = list(size = 5))) +
-  geom_nodepoint(aes(subset = (as.numeric(label) > 0.8)), colour = "black", shape = 18, size = 3) +
+  geom_nodepoint(aes(subset = (as.numeric(label) > 0.8)), 
+                 colour = "black", shape = 18, 
+                 size = 3,, na.rm = TRUE) +
   guides(colour = guide_legend(ncol = 2))
 
 ggsave("Outgroup_NJ_tree_kuri_pileupcaller.png", width = 10, height = 6)
